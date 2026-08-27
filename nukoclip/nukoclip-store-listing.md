@@ -1,20 +1,19 @@
 # Nukoclip — ストア掲載情報(下書き)
 
 ## 短い説明 (日本語, 80文字以内)
-筆圧対応のレイヤー式お絵描きアプリ。PSD書き出し・左手デバイス・8言語対応。
-(38文字)
+レイヤー機能充実のシンプルなお絵描きアプリ。筆圧対応ブラシ・左手デバイス・8言語対応。
+(41文字)
 
 ## 短い説明 (English, ≤80 chars)
-Pressure-sensitive layered drawing app with PSD export & left-hand controller.
-(79 chars)
+Simple drawing app with rich layers, pressure brushes & left-hand controller.
+(78 chars)
 
 ---
 
 ## 詳しい説明 (日本語)
 
-Nukoclip(ヌコクリップ)は、スマホ・タブレットで本格的なイラスト制作ができる
-無料のお絵描きアプリです。SAIやCLIP STUDIO PAINTのような感覚で、
-レイヤーを重ねながら自由に描けます。
+Nukoclip(ヌコクリップ)は、スマホ・タブレットで本格的なイラスト制作ができる、
+レイヤー機能が充実したシンプルな無料お絵描きアプリです。
 
 【主な機能】
 ■ 筆圧対応ブラシ
@@ -47,8 +46,7 @@ Nukoclip(ヌコクリップ)は、スマホ・タブレットで本格的なイ�
 
 ■ 保存・書き出し
 アプリ独自形式(.nkcl、レイヤー構成を保持)での保存に加え、
-PNG/JPG画像としての書き出し、Photoshop形式(PSD)での書き出し・読み込みにも対応
-(PSD機能はPro版プレビュー、設定からON/OFF可能)。
+PNG/JPG画像としての書き出しにも対応。
 
 ■ 多言語対応
 日本語・英語・スペイン語・フランス語・タイ語・ベトナム語・簡体中国語・繁体中国語の
@@ -64,8 +62,8 @@ Undo/Redo、コピー・カット・ペースト、画像のレイヤー読み�
 
 ## Full description (English)
 
-Nukoclip is a free, layer-based drawing app for phones and tablets, built for
-serious illustration work in the spirit of apps like SAI and CLIP STUDIO PAINT.
+Nukoclip is a simple, free drawing app for phones and tablets, built around
+a rich set of layer tools for serious illustration work.
 
 **Pressure-sensitive brushes**
 Pen, Brush, Airbrush, Eraser, Blur, and Smudge — six tools with stroke
@@ -98,9 +96,8 @@ when a physical keyboard is connected, without conflicting with the
 left-hand controller.
 
 **Save & export**
-Save projects in Nukoclip's own format (.nkcl, layers preserved), export as
-PNG or JPG, or export/import Photoshop (PSD) files (PSD support is a Pro
-feature preview, toggle it on in Settings).
+Save projects in Nukoclip's own format (.nkcl, layers preserved), or export
+as PNG or JPG.
 
 **8 languages**
 Japanese, English, Spanish, French, Thai, Vietnamese, Simplified Chinese,
@@ -111,9 +108,14 @@ No ads, no internet connection required, no personal data collected.
 ---
 
 ## 備考・確認事項
-- 連絡先メールアドレスは未確定です(プライバシーポリシーと合わせて決めてください)。
-- スクリーンショット・フィーチャーグラフィック(1024×500)・アイコン512×512は
-  別途用意が必要です(アイコンはVectorDrawableから書き出せます)。
-- コンテンツレーティング(全年齢向け想定)はPlay Console上で別途申告が必要です。
-- 「Pro版プレビュー」の文言は、実際に有料版を出すタイミングで見直してください
-  (現状は無料で全機能使える設計です)。
+- 連絡先メール: nu0417ko@gmail.com(確定・アプリ内「このアプリについて」にも表示済み)。
+- プライバシーポリシー: https://wildheit.github.io/nukoclip/nukoclip-privacy.html(公開済み。
+  ただしページ内の「Last updated: [DATE]」は公開前に実日付へ差し替えること)。
+- アイコン512×512・フィーチャーグラフィック1024×500は書き出し済み。
+- スクリーンショットは2枚(タブレット横向き・スマホ縦向き、左手デバイスパネルが写ったもの)を
+  用意済み。Playストアは最低2枚でOKだが、実際の作品(お絵描き途中の絵)が写ったものを
+  追加すると訴求力が上がるので、余裕があれば後日追加するとよい。
+- コンテンツレーティング(全年齢向け想定)はPlay Console上で別途申告が必要。
+- **PSD書き出し/読み込みへの言及はこの版から削除済み**(公開前に機能自体を無効化する予定のため)。
+  アプリ側の設定画面にはまだPSDのON/OFFトグルが残っているので、実際に無効化する際は
+  忘れずに対応すること(このドラフト更新はあくまで説明文のみ)。
