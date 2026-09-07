@@ -1,6 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NukoClip — 描くを、もっとシンプルに。</title>
+<meta name="description" content="NukoClipは、レイヤー機能や豊富な描画ツールを備えた、Android向けの基本無料お絵描きアプリです。広告なし・通信不要・個人情報の収集なし。">
+<link rel="icon" href="assets/icon.png">
+<style>
+  :root {
+    --violet-deep: #3B2F54;
+    --violet-soft: #4B3B6B;
+    --coral: #FF705F;
+    --cream: #F8E9D4;
+    --ink: #222222;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  a { color: var(--violet-soft); }
+  img { max-width: 100%; display: block; }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background: var(--violet-deep);
+    color: var(--cream);
+  }
+  header .brand { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 20px; }
+  header .brand img { width: 32px; height: 32px; border-radius: 8px; }
+  header nav a { color: var(--cream); text-decoration: none; font-size: 14px; opacity: 0.85; }
+  header nav a:hover { opacity: 1; text-decoration: underline; }
+
+  .hero {
+    background: linear-gradient(135deg, var(--violet-deep) 0%, var(--violet-deep) 60%, var(--coral) 130%);
+    color: var(--cream);
+    padding: 64px 24px 80px;
+  }
+  .hero-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .hero h1 { font-size: 44px; margin: 0 0 8px; }
+  .hero .tagline { font-size: 20px; opacity: 0.9; margin: 0 0 20px; }
+  .hero p.desc { font-size: 16px; opacity: 0.85; max-width: 46ch; }
+  .badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+  .badge {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+  .cta {
+    display: inline-block;
+    margin-top: 28px;
+    background: var(--coral);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  }
+  .hero-art {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  }
+
+  section { padding: 72px 24px; }
+  .section-inner { max-width: 1080px; margin: 0 auto; }
+  h2 { font-size: 30px; text-align: center; margin: 0 0 12px; color: var(--violet-deep); }
+  .section-sub { text-align: center; color: #555; margin: 0 0 40px; }
+
+  .screens {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x mandatory;
+  }
+  .screens img {
+    scroll-snap-align: start;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    height: 360px;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .feature-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .feature-card h3 { margin: 0 0 8px; font-size: 17px; color: var(--violet-deep); }
+  .feature-card p { margin: 0; font-size: 14px; color: #555; }
+
+  .feature-shots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .feature-shots img { border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+
+  .cta-section {
+    text-align: center;
+    background: var(--cream);
+  }
+  .cta-section .cta { background: var(--violet-deep); }
+
+  footer {
+    background: var(--violet-deep);
+    color: rgba(248,233,212,0.7);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 13px;
+  }
+  footer a { color: var(--cream); }
+
+  @media (max-width: 720px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 34px; }
+  }
+</style>
 </head>
 <body>
-  <h1>NukoClip -Simple Paint Application- </h1>
-  <a href="https://wildheit.github.io/nukoclip/nukoclip-privacy.html">privacy policy</a>
+
+<header>
+  <div class="brand">
+    <img src="assets/icon.png" alt="NukoClip icon">
+    NukoClip
+  </div>
+  <nav>
+    <a href="nukoclip-privacy.html">Privacy Policy</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>NukoClip</h1>
+      <p class="tagline">描くを、もっとシンプルに。</p>
+      <p class="desc">
+        レイヤー機能充実のシンプルなお絵描きアプリ。筆圧対応ブラシ・左手デバイス風コントローラー・
+        9言語対応。スマホ・タブレットで本格的なイラスト制作ができます。
+      </p>
+      <div class="badges">
+        <span class="badge">広告なし</span>
+        <span class="badge">通信不要</span>
+        <span class="badge">個人情報の収集なし</span>
+        <span class="badge">基本無料</span>
+      </div>
+      <!-- Google Play の公開後、実際のストアURLに差し替え -->
+      <a class="cta" href="#" aria-disabled="true">Google Play で手に入れよう(近日公開)</a>
+    </div>
+    <div class="hero-art">
+      <!-- 実際に NukoClip で描かれたイラスト -->
+      <img src="assets/artwork-showcase.jpg" alt="NukoClipで描かれたイラスト作品">
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="section-inner">
+    <h2>アプリの画面</h2>
+    <p class="section-sub">実際にNukoClip上で制作した作品と、その編集画面です。</p>
+    <div class="screens">
+      <img src="assets/screenshot-2.jpg" alt="NukoClipの編集画面(ナビゲーターパネル表示)">
+      <img src="assets/screenshot-3.jpg" alt="NukoClipの編集画面(レイヤーマスク編集中、線画のみ表示)">
+    </div>
+  </div>
+</section>
+
+<section style="background:white;">
+  <div class="section-inner">
+    <h2>主な機能</h2>
+    <p class="section-sub">本格的なレイヤー編集から、左手デバイス風の操作パネルまで。</p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>筆圧対応ブラシ</h3>
+        <p>ペン・ブラシ・エアブラシ・消しゴム・ぼかし・指先(スマッジ)の6種類。手ブレ補正にも対応。</p>
+      </div>
+      <div class="feature-card">
+        <h3>レイヤー機能が充実</h3>
+        <p>合成モード18種類、レイヤーマスク、アルファロック、クリッピング、フォルダ管理、複数選択操作。</p>
+      </div>
+      <div class="feature-card">
+        <h3>選択と変形を自由に</h3>
+        <p>矩形・楕円・投げ縄・自動選択と、自由変形・ゆがみ変形で思い通りに編集。</p>
+      </div>
+      <div class="feature-card">
+        <h3>色調補正・フィルター</h3>
+        <p>明るさ・コントラスト、色相・彩度・明度、レベル補正、ぼかし、シャープ。</p>
+      </div>
+      <div class="feature-card">
+        <h3>左手デバイス風コントローラー</h3>
+        <p>十字キー+ABXYボタンをカスタマイズ可能。物理キーボードのショートカットも使用可能。</p>
+      </div>
+      <div class="feature-card">
+        <h3>保存・書き出し&多言語対応</h3>
+        <p>.nkclで保存、PNG/JPGで書き出し。9言語に対応し、端末の言語設定に自動で追従。</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="section-inner">
+    <h2>広告なし、通信不要、完全オフライン</h2>
+    <p class="section-sub">
+      個人情報の収集も一切行いません。いつでもどこでも、安心してお絵描きが楽しめます。
+    </p>
+    <!-- Google Play の公開後、実際のストアURLに差し替え -->
+    <a class="cta" href="#" aria-disabled="true">Google Play で手に入れよう(近日公開)</a>
+  </div>
+</section>
+
+<footer>
+  <p>NukoClip — 個人開発アプリ</p>
+  <p><a href="nukoclip-privacy.html">Privacy Policy</a> · <a href="mailto:nu0417ko@gmail.com">お問い合わせ</a> · <a href="https://wildheit.github.io/">Nuko Apps</a></p>
+</footer>
+
 </body>
 </html>
