@@ -1,12 +1,107 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Nuko</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuko Apps</title>
+<meta name="description" content="個人開発者が作る、広告なし・通信不要のシンプルなAndroidアプリ一覧。">
+<link rel="icon" href="nukoclip/assets/icon.png">
+<style>
+  :root {
+    --violet-deep: #3B2F54;
+    --violet-soft: #4B3B6B;
+    --coral: #FF705F;
+    --cream: #F8E9D4;
+    --ink: #222222;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  a { color: var(--violet-soft); }
+  img { max-width: 100%; display: block; }
+
+  .hero {
+    background: linear-gradient(135deg, var(--violet-deep) 0%, var(--violet-deep) 60%, var(--coral) 130%);
+    color: var(--cream);
+    padding: 64px 24px 56px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 40px; margin: 0 0 8px; }
+  .hero p { font-size: 17px; opacity: 0.9; max-width: 46ch; margin: 0 auto; }
+
+  main { max-width: 720px; margin: 0 auto; padding: 48px 24px 24px; }
+
+  .app-list { display: flex; flex-direction: column; gap: 20px; }
+  .app-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--ink);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .app-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+  .app-card img {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+  .app-card .app-name { font-size: 18px; font-weight: bold; color: var(--violet-deep); margin: 0 0 4px; }
+  .app-card .app-desc { font-size: 14px; color: #555; margin: 0; }
+
+  .more-note {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-top: 36px;
+  }
+
+  footer {
+    background: var(--violet-deep);
+    color: rgba(248,233,212,0.7);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 48px;
+  }
+  footer a { color: var(--cream); }
+</style>
 </head>
 <body>
+
+<div class="hero">
   <h1>Nuko Apps</h1>
-  <p>個人開発者として、Nukoclipをはじめ「あったら便利」と思えるシンプルなアプリを一つひとつ丁寧に作っています。広告なし・通信不要のアプリを中心に、これからも日常にちょっと役立つ道具を少しずつリリースしていく予定です。</p>
-  <a href="https://wildheit.github.io/nukoclip/">1. NukoClip</a>
+  <p>個人開発者として、「あったら便利」と思えるシンプルなアプリを一つひとつ丁寧に作っています。広告なしのアプリを中心に展開中です。</p>
+</div>
+
+<main>
+  <div class="app-list">
+    <a class="app-card" href="nukoclip/">
+      <img src="nukoclip/assets/icon.png" alt="NukoClip icon">
+      <div>
+        <p class="app-name">NukoClip</p>
+        <p class="app-desc">描くを、もっとシンプルに。レイヤー機能充実のお絵描きアプリ。</p>
+      </div>
+    </a>
+  </div>
+
+  <p class="more-note">他にもいくつかアプリを開発中です。公開まで少々お待ちください。</p>
+</main>
+
+<footer>
+  <p>Nuko Apps — 個人開発</p>
+  <p><a href="mailto:nu0417ko@gmail.com">お問い合わせ</a></p>
+</footer>
+
 </body>
 </html>
