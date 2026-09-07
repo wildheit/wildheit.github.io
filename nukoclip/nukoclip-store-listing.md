@@ -1,7 +1,7 @@
 # Nukoclip — ストア掲載情報(下書き)
 
 ## 短い説明 (日本語, 80文字以内)
-レイヤー機能充実のシンプルなお絵描きアプリ。筆圧対応ブラシ・左手デバイス・8言語対応。
+レイヤー機能充実のシンプルなお絵描きアプリ。筆圧対応ブラシ・左手デバイス・9言語対応。
 (41文字)
 
 ## 短い説明 (English, ≤80 chars)
@@ -49,8 +49,8 @@ Nukoclip(ヌコクリップ)は、スマホ・タブレットで本格的なイ�
 PNG/JPG画像としての書き出しにも対応。
 
 ■ 多言語対応
-日本語・英語・スペイン語・フランス語・タイ語・ベトナム語・簡体中国語・繁体中国語の
-8言語に対応。端末の言語設定に自動で追従します。
+日本語・英語・スペイン語・フランス語・タイ語・ベトナム語・簡体中国語・繁体中国語・韓国語の
+9言語に対応。端末の言語設定に自動で追従します。
 
 ■ その他
 Undo/Redo、コピー・カット・ペースト、画像のレイヤー読み込み、
@@ -99,9 +99,9 @@ left-hand controller.
 Save projects in Nukoclip's own format (.nkcl, layers preserved), or export
 as PNG or JPG.
 
-**8 languages**
+**9 languages**
 Japanese, English, Spanish, French, Thai, Vietnamese, Simplified Chinese,
-and Traditional Chinese — follows your device language automatically.
+Traditional Chinese, and Korean — follows your device language automatically.
 
 No ads, no internet connection required, no personal data collected.
 
@@ -109,13 +109,12 @@ No ads, no internet connection required, no personal data collected.
 
 ## 備考・確認事項
 - 連絡先メール: nu0417ko@gmail.com(確定・アプリ内「このアプリについて」にも表示済み)。
-- プライバシーポリシー: https://wildheit.github.io/nukoclip/nukoclip-privacy.html(公開済み。
-  ただしページ内の「Last updated: [DATE]」は公開前に実日付へ差し替えること)。
+- プライバシーポリシー: https://wildheit.github.io/nukoclip/nukoclip-privacy.html(公開済み、日付も実日付に更新済み)。
 - アイコン512×512・フィーチャーグラフィック1024×500は書き出し済み。
-- スクリーンショットは2枚(タブレット横向き・スマホ縦向き、左手デバイスパネルが写ったもの)を
-  用意済み。Playストアは最低2枚でOKだが、実際の作品(お絵描き途中の絵)が写ったものを
-  追加すると訴求力が上がるので、余裕があれば後日追加するとよい。
+- GitHub紹介ページ(https://wildheit.github.io/nukoclip/)は実機スクリーンショットを使った
+  機能紹介画像(レイヤー/左手デバイス/筆圧ブラシ/多言語)に更新済み。ストア用の縦長スクリーンショットは
+  別途用意中(最低2枚でOKだが、実際の作品が写ったものを追加すると訴求力が上がる)。
 - コンテンツレーティング(全年齢向け想定)はPlay Console上で別途申告が必要。
-- **PSD書き出し/読み込みへの言及はこの版から削除済み**(公開前に機能自体を無効化する予定のため)。
-  アプリ側の設定画面にはまだPSDのON/OFFトグルが残っているので、実際に無効化する際は
-  忘れずに対応すること(このドラフト更新はあくまで説明文のみ)。
+- PSD書き出し/読み込みは、ストア配布用ビルド(storeフレーバー)では機能ごと非表示になるよう対応済み
+  (`BuildConfig.PSD_FEATURE_AVAILABLE`で制御。手元の開発用ビルドでは引き続き試せる)。説明文からも
+  PSDへの言及は削除済み。
