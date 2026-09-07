@@ -115,13 +115,21 @@
   .feature-card h3 { margin: 0 0 8px; font-size: 17px; color: var(--violet-deep); }
   .feature-card p { margin: 0; font-size: 14px; color: #555; }
 
+  /* 縦長/横長の画像が混在するため(左手デバイス等は横長)、グリッドで無理に揃えず1枚ずつ
+     縦に並べる。各画像は自身の比率のまま、幅だけ揃える */
   .feature-shots {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
     margin-top: 48px;
   }
-  .feature-shots img { border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+  .feature-shots img {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
 
   .cta-section {
     text-align: center;
@@ -222,6 +230,13 @@
         <h3>保存・書き出し&多言語対応</h3>
         <p>.nkclで保存、PNG/JPGで書き出し。9言語に対応し、端末の言語設定に自動で追従。</p>
       </div>
+    </div>
+
+    <div class="feature-shots">
+      <img src="assets/feature-1-layers.png" alt="レイヤー機能が充実: 合成モード18種類・マスク・クリッピング・フォルダ管理まで、本格的なレイヤー編集ができます">
+      <img src="assets/feature-2-lefthand.png" alt="左手デバイス風コントローラー: 十字キー+ABXYボタンをカスタマイズ可能。物理キーボードのショートカットも使えます">
+      <img src="assets/feature-3-brush.png" alt="筆圧対応ブラシ: ペン・ブラシ・エアブラシ・消しゴム・ぼかし・指先の6種類。手ブレ補正で線がなめらかに">
+      <img src="assets/feature-4-lang.png" alt="9言語対応&プライバシー重視: 広告なし・通信不要・個人情報の収集も一切ありません">
     </div>
 
   </div>
