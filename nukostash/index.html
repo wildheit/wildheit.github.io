@@ -87,6 +87,22 @@
     padding: 12px 20px;
     border-radius: 12px;
   }
+  .cta {
+    display: inline-block;
+    margin-top: 28px;
+    background: var(--amber-deep);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  }
+  .cta-note {
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.8;
+  }
   .hero-art {
     border-radius: 20px;
     overflow: hidden;
@@ -189,7 +205,10 @@
         <span class="badge" data-ja="個人開発" data-en="Indie-developed">個人開発</span>
         <span class="badge" data-ja="ログイン情報は端末内のみ" data-en="Login stays on your device">ログイン情報は端末内のみ</span>
       </div>
-      <div class="status-note" data-ja="現在配布方法を準備中です。公開までしばらくお待ちください。" data-en="Distribution is being prepared. Please check back soon.">現在配布方法を準備中です。公開までしばらくお待ちください。</div>
+      <div>
+        <a class="cta" href="https://github.com/wildheit/stash/releases/latest" data-ja="APKをダウンロード" data-en="Download APK">APKをダウンロード</a>
+      </div>
+      <p class="cta-note" data-ja="Android向け。非公式アプリ・サイドロード配布です。詳しくは下記「配布について」をご確認ください。" data-en="For Android. An unofficial app, distributed as a sideloaded APK — see “About distribution” below for details.">Android向け。非公式アプリ・サイドロード配布です。詳しくは下記「配布について」をご確認ください。</p>
     </div>
     <div class="hero-art">
       <img src="assets/screenshot-grid.png" alt="Stashのタイムライングリッド表示(イメージ)">
