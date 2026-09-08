@@ -56,8 +56,16 @@
     border-radius: 12px;
     flex-shrink: 0;
   }
-  .app-card .app-name { font-size: 18px; font-weight: bold; color: var(--violet-deep); margin: 0 0 4px; }
+  .app-card .app-name { font-size: 18px; font-weight: bold; color: var(--violet-deep); margin: 0 0 4px; display: flex; align-items: center; gap: 8px; }
   .app-card .app-desc { font-size: 14px; color: #555; margin: 0; }
+  .tag {
+    font-size: 11px;
+    font-weight: normal;
+    color: #8a6d1f;
+    background: #F6E4C9;
+    border-radius: 999px;
+    padding: 2px 10px;
+  }
 
   .more-note {
     text-align: center;
@@ -91,6 +99,13 @@
       <div>
         <p class="app-name">NukoClip</p>
         <p class="app-desc">描くを、もっとシンプルに。レイヤー機能充実のお絵描きアプリ。</p>
+      </div>
+    </a>
+    <a class="app-card" href="nukostash/">
+      <img src="nukostash/assets/icon.svg" alt="Stash icon">
+      <div>
+        <p class="app-name">Stash <span class="tag">配布準備中</span></p>
+        <p class="app-desc">写真や動画を簡単に貯められるタイムラインビューワーアプリ。</p>
       </div>
     </a>
   </div>

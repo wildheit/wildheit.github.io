@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg-grad" x1="83" y1="51" x2="901" y2="973" gradientUnits="userSpaceOnUse">
+      <stop offset="0.0" stop-color="#493B70"/>
+      <stop offset="0.35" stop-color="#493B70"/>
+      <stop offset="1.0" stop-color="#C17817"/>
+    </linearGradient>
+    <radialGradient id="bg-glow" cx="861" cy="901" r="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0.0" stop-color="#F2B84B" stop-opacity="0.851"/>
+      <stop offset="0.5" stop-color="#F2B84B" stop-opacity="0.349"/>
+      <stop offset="1.0" stop-color="#F2B84B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <path fill="url(#bg-grad)" d="M190,0h644c104.9,0,190,85.1,190,190v644c0,104.9,-85.1,190,-190,190H190C85.1,1024,0,938.9,0,834V190
+      C0,85.1,85.1,0,190,0z"/>
+  <path fill="url(#bg-glow)" d="M190,0h644c104.9,0,190,85.1,190,190v644c0,104.9,-85.1,190,-190,190H190C85.1,1024,0,938.9,0,834V190
+      C0,85.1,85.1,0,190,0z"/>
+
+  <path fill="#F8E9D4" d="M759.8,665.4c-30.2,35,-82.8,60.8,-143.3,71.5c-56.3,10,-128.1,7.2,-185.2,-3.5c-62.3,-11.4,-113,-33.3,-145.9,-59.8
+      c-27.7,-22.2,-41.8,-59.4,-45.2,-77.3c-5.6,-29.4,16.7,-85.4,39.1,-108.7c21.4,-22.3,56.8,-51.5,80.2,-59.8c0,0,-6,-32.3,4.4,-70.3
+      c6.9,-24.4,19.7,-63.2,24.8,-69.3c9,25.6,30.2,98.7,45,113c0,0,3.8,-8.4,72,-11.5c83.3,2.7,85.8,14.5,87.2,11.5
+      c13.7,-12.5,27,-93.3,32.9,-113c16.4,16.5,31.2,37.3,38.1,61.7c10.4,38,8.8,33.5,7.9,68c26.8,13.6,59.3,44.4,78.8,65.5
+      c20.5,22.3,42.8,67.7,44.5,97.8C796,610.4,783.3,638.3,759.8,665.4z"/>
+  <circle fill="#493B70" cx="433.2" cy="479.7" r="15.7"/>
+  <circle fill="#493B70" cx="597.4" cy="479.7" r="15.7"/>
+  <path fill="none" stroke="#493B70" stroke-width="16" stroke-linecap="round" d="M411.3,506.8L330.1,485"/>
+  <path fill="none" stroke="#493B70" stroke-width="16" stroke-linecap="round" d="M412.2,528.6l-97,21"/>
+  <path fill="none" stroke="#493B70" stroke-width="16" stroke-linecap="round" d="M619.2,506.8l81.2,-21.8"/>
+  <path fill="none" stroke="#493B70" stroke-width="16" stroke-linecap="round" d="M618.3,528.6l97,21"/>
+
+  <circle fill="#C17817" stroke="#FFF9F2" stroke-width="14" cx="725" cy="670" r="120"/>
+  <rect fill="#FFF9F2" x="647" y="592" width="68" height="68"/>
+  <rect fill="#FFF9F2" x="735" y="592" width="68" height="68"/>
+  <rect fill="#FFF9F2" x="647" y="680" width="68" height="68"/>
+  <rect fill="#FFF9F2" x="735" y="680" width="68" height="68"/>
+</svg>
