@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nukoclip Privacy Policy</title>
+<title data-ja="NukoClip プライバシーポリシー" data-en="Nukoclip Privacy Policy">Nukoclip Privacy Policy</title>
+<script src="../assets/i18n.js" defer></script>
 <style>
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -13,6 +14,17 @@
     line-height: 1.6;
     color: #222;
   }
+  .lang-toggle { display: flex; gap: 6px; justify-content: flex-end; margin-bottom: 16px; }
+  .lang-toggle button {
+    background: white;
+    border: 1px solid #ccc;
+    color: #444;
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .lang-toggle button.active { background: #4B3B6B; color: white; border-color: #4B3B6B; font-weight: bold; }
   h1 { font-size: 28px; margin-bottom: 4px; }
   .updated { color: #666; font-size: 14px; margin-bottom: 32px; }
   h2 { font-size: 20px; margin-top: 36px; }
@@ -29,23 +41,28 @@
 </head>
 <body>
 
-<h1>Privacy Policy for Nukoclip</h1>
-<p class="updated">Last updated: 28 Aug 2026</p>
+<div class="lang-toggle">
+  <button type="button" data-lang-btn="ja">日本語</button>
+  <button type="button" data-lang-btn="en">EN</button>
+</div>
 
-<p>
+<h1 data-ja="NukoClip プライバシーポリシー" data-en="Privacy Policy for Nukoclip">Privacy Policy for Nukoclip</h1>
+<p class="updated" data-ja="最終更新日: 2026年8月28日" data-en="Last updated: 28 Aug 2026">Last updated: 28 Aug 2026</p>
+
+<p data-ja="NukoClip(以下「本アプリ」)は、Nuko(以下「当方」)が開発するAndroid向けの描画・イラスト制作アプリです。このページでは、本アプリがどのようなデータを収集し、また収集しないかについて説明します。" data-en="Nukoclip (&quot;the app&quot;) is a drawing/illustration app for Android, developed by Nuko (&quot;we&quot;, &quot;our&quot;). This page explains what data the app does — and does not — collect.">
   Nukoclip ("the app") is a drawing/illustration app for Android, developed by Nuko
   ("we", "our"). This page explains what data the app does — and does not — collect.
 </p>
 
-<h2>Short version</h2>
-<p>
+<h2 data-ja="概要" data-en="Short version">Short version</h2>
+<p data-ja="NukoClipは、個人情報を一切収集・保存・送信しません。本アプリはインターネット接続の権限を持たず、アクセス解析・広告・第三者のトラッキングSDKも含まれていません。描いた作品や保存したファイルはすべて、あなたが選んだ場所に、あなたの端末内だけに保存されます。" data-en="Nukoclip does not collect, store, or transmit any personal data. The app has no internet access permission, contains no analytics, no advertising, and no third-party tracking SDKs. Everything you draw and every file you save stays on your device, in a location you choose.">
   Nukoclip does not collect, store, or transmit any personal data. The app has no internet
   access permission, contains no analytics, no advertising, and no third-party tracking SDKs.
   Everything you draw and every file you save stays on your device, in a location you choose.
 </p>
 
-<h2>What the app does with your files</h2>
-<p>
+<h2 data-ja="ファイルの取り扱いについて" data-en="What the app does with your files">What the app does with your files</h2>
+<p data-ja="NukoClipは、あなたが明示的に操作したときにのみ、Android標準のファイル選択画面(Storage Access Framework)を通じてファイルの読み書きを行います。例えば、作品の保存、PSD形式での書き出し、画像のレイヤーとしての読み込みなどです。本アプリは、この選択画面を通じて直接選んだファイル以外をスキャン・インデックス化・アクセスすることはなく、いかなるファイルもどこにもアップロードしません(そもそもアップロード先となるサーバー自体が存在しません)。" data-en="Nukoclip reads and writes files only when you explicitly ask it to, through Android's built-in file picker (the Storage Access Framework). For example: saving a drawing, exporting a PSD, or importing an image as a layer. The app does not scan, index, or access any files you have not directly chosen through that picker, and it never uploads any file anywhere — there is no server for it to upload to.">
   Nukoclip reads and writes files only when you explicitly ask it to, through Android's
   built-in file picker (the Storage Access Framework). For example: saving a drawing,
   exporting a PSD, or importing an image as a layer. The app does not scan, index, or access
@@ -53,50 +70,50 @@
   anywhere — there is no server for it to upload to.
 </p>
 
-<h2>Permissions</h2>
-<p>
+<h2 data-ja="権限について" data-en="Permissions">Permissions</h2>
+<p data-ja="NukoClipは、INTERNET権限やストレージ権限を要求しません。すべてのファイルアクセスは、上記のシステム標準のファイル選択画面を通じて行われ、この方式では権限の許可は不要です。" data-en="Nukoclip does not request the INTERNET permission or any storage permission. All file access goes through the system file picker described above, which does not require a permission grant.">
   Nukoclip does not request the <code>INTERNET</code> permission or any storage permission.
   All file access goes through the system file picker described above, which does not require
   a permission grant.
 </p>
 
-<h2>Data collection and analytics</h2>
-<p>We do not collect:</p>
+<h2 data-ja="データ収集・アクセス解析について" data-en="Data collection and analytics">Data collection and analytics</h2>
+<p data-ja="当方が収集しないもの:" data-en="We do not collect:">We do not collect:</p>
 <ul>
-  <li>Personal information (name, email, location, etc.)</li>
-  <li>Usage analytics or crash reports sent to any server</li>
-  <li>Advertising identifiers</li>
-  <li>Any data at all, from anyone, including children</li>
+  <li data-ja="個人情報(氏名・メールアドレス・位置情報など)" data-en="Personal information (name, email, location, etc.)">Personal information (name, email, location, etc.)</li>
+  <li data-ja="サーバーに送信される利用状況の解析やクラッシュレポート" data-en="Usage analytics or crash reports sent to any server">Usage analytics or crash reports sent to any server</li>
+  <li data-ja="広告識別子" data-en="Advertising identifiers">Advertising identifiers</li>
+  <li data-ja="お子様を含め、いかなる方からのいかなるデータも" data-en="Any data at all, from anyone, including children">Any data at all, from anyone, including children</li>
 </ul>
-<p>
+<p data-ja="クラッシュ発生時にAndroidシステムが生成する標準的なログは端末内にのみ保存され、あなた自身にのみ表示されます(不具合報告の際にメールなどで任意に当方へ送っていただいた場合を除きます)。" data-en="Standard Android system logs generated during a crash stay on your device and are only visible to you (or to us if you voluntarily choose to send them to us, e.g. by email, when reporting a bug).">
   Standard Android system logs generated during a crash stay on your device and are only
   visible to you (or to us if you voluntarily choose to send them to us, e.g. by email, when
   reporting a bug).
 </p>
 
-<h2>Third-party services</h2>
-<p>
+<h2 data-ja="第三者サービスについて" data-en="Third-party services">Third-party services</h2>
+<p data-ja="NukoClipは、第三者のSDK・解析プラットフォーム・広告ネットワーク・クラウドサービスを一切組み込んでいません。完全にオフラインで動作します。" data-en="Nukoclip does not integrate any third-party SDK, analytics platform, ad network, or cloud service. It works fully offline.">
   Nukoclip does not integrate any third-party SDK, analytics platform, ad network, or
   cloud service. It works fully offline.
 </p>
 
-<h2>Children's privacy</h2>
-<p>
+<h2 data-ja="お子様のプライバシーについて" data-en="Children's privacy">Children's privacy</h2>
+<p data-ja="本アプリは誰からもデータを収集しないため、13歳未満のお子様(またはお住まいの国で定められた年齢未満の方)から意図的に情報を収集することもありません。" data-en="Because the app collects no data from anyone, it does not knowingly collect any information from children under 13 (or the relevant age in your country).">
   Because the app collects no data from anyone, it does not knowingly collect any
   information from children under 13 (or the relevant age in your country).
 </p>
 
-<h2>Changes to this policy</h2>
-<p>
+<h2 data-ja="本ポリシーの変更について" data-en="Changes to this policy">Changes to this policy</h2>
+<p data-ja="本ポリシーの内容に変更があった場合(例: 将来追加されるオプション機能でネットワークアクセスが必要になる場合など)、このページを更新し、上記の「最終更新日」も合わせて更新します。そのような変更は、リリース前にアプリ内の説明にも反映されます。" data-en="If this policy ever changes — for example, if a future optional feature introduces network access — this page will be updated and the &quot;Last updated&quot; date above will change accordingly. Any such change would also be reflected in the app's in-app description before release.">
   If this policy ever changes — for example, if a future optional feature introduces network
   access — this page will be updated and the "Last updated" date above will change
   accordingly. Any such change would also be reflected in the app's in-app description before
   release.
 </p>
 
-<h2>Contact</h2>
-<p>
-  Questions about this policy or the app can be sent to: <a href="mailto:nu0417ko@gmail.com">[CONTACT_EMAIL]</a>
+<h2 data-ja="お問い合わせ" data-en="Contact">Contact</h2>
+<p data-ja="本ポリシーやアプリに関するご質問は、以下までお送りください:" data-en="Questions about this policy or the app can be sent to:">
+  Questions about this policy or the app can be sent to: <a href="mailto:nu0417ko@gmail.com">nu0417ko@gmail.com</a>
 </p>
 
 </body>

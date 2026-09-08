@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nuko Apps</title>
-<meta name="description" content="個人開発者が作る、広告なしのシンプルなAndroidアプリ一覧。">
+<title data-ja="Nuko Apps" data-en="Nuko Apps">Nuko Apps</title>
+<meta name="description" data-ja="個人開発者が作る、広告なしのシンプルなAndroidアプリ一覧。" data-en="A list of simple, ad-free Android apps by an independent developer." content="個人開発者が作る、広告なしのシンプルなAndroidアプリ一覧。">
 <link rel="icon" href="nukoclip/assets/icon.png">
+<script src="assets/i18n.js" defer></script>
 <style>
   :root {
     --violet-deep: #3B2F54;
@@ -26,6 +27,7 @@
   img { max-width: 100%; display: block; }
 
   .hero {
+    position: relative;
     background: linear-gradient(135deg, var(--violet-deep) 0%, var(--violet-deep) 60%, var(--coral) 130%);
     color: var(--cream);
     padding: 64px 24px 56px;
@@ -33,6 +35,24 @@
   }
   .hero h1 { font-size: 40px; margin: 0 0 8px; }
   .hero p { font-size: 17px; opacity: 0.9; max-width: 46ch; margin: 0 auto; }
+
+  .lang-toggle {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    display: flex;
+    gap: 6px;
+  }
+  .lang-toggle button {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: var(--cream);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .lang-toggle button.active { background: var(--cream); color: var(--violet-deep); font-weight: bold; border-color: var(--cream); }
 
   main { max-width: 720px; margin: 0 auto; padding: 48px 24px 24px; }
 
@@ -88,8 +108,12 @@
 <body>
 
 <div class="hero">
+  <div class="lang-toggle">
+    <button type="button" data-lang-btn="ja">日本語</button>
+    <button type="button" data-lang-btn="en">EN</button>
+  </div>
   <h1>Nuko Apps</h1>
-  <p>個人開発者として、「あったら便利」と思えるシンプルなアプリを一つひとつ丁寧に作っています。広告なしのアプリを中心に展開中です。</p>
+  <p data-ja="個人開発者として、「あったら便利」と思えるシンプルなアプリを一つひとつ丁寧に作っています。広告なしのアプリを中心に展開中です。" data-en="As an independent developer, I carefully build simple apps that are genuinely useful, one at a time. Most of them are ad-free.">個人開発者として、「あったら便利」と思えるシンプルなアプリを一つひとつ丁寧に作っています。広告なしのアプリを中心に展開中です。</p>
 </div>
 
 <main>
@@ -98,24 +122,24 @@
       <img src="nukoclip/assets/icon.png" alt="NukoClip icon">
       <div>
         <p class="app-name">NukoClip</p>
-        <p class="app-desc">描くを、もっとシンプルに。レイヤー機能充実のお絵描きアプリ。</p>
+        <p class="app-desc" data-ja="描くを、もっとシンプルに。レイヤー機能充実のお絵描きアプリ。" data-en="Drawing made simple. A layer-rich illustration app.">描くを、もっとシンプルに。レイヤー機能充実のお絵描きアプリ。</p>
       </div>
     </a>
     <a class="app-card" href="nukostash/">
       <img src="nukostash/assets/icon.svg" alt="Stash icon">
       <div>
-        <p class="app-name">Stash <span class="tag">配布準備中</span></p>
-        <p class="app-desc">写真や動画を簡単に貯められるタイムラインビューワーアプリ。</p>
+        <p class="app-name">Stash <span class="tag" data-ja="配布準備中" data-en="Coming soon">配布準備中</span></p>
+        <p class="app-desc" data-ja="写真や動画を簡単に貯められるタイムラインビューワーアプリ。" data-en="A timeline viewer that makes it easy to save photos and videos.">写真や動画を簡単に貯められるタイムラインビューワーアプリ。</p>
       </div>
     </a>
   </div>
 
-  <p class="more-note">他にもいくつかアプリを開発中です。公開まで少々お待ちください。</p>
+  <p class="more-note" data-ja="他にもいくつかアプリを開発中です。公開まで少々お待ちください。" data-en="A few more apps are in the works. Stay tuned.">他にもいくつかアプリを開発中です。公開まで少々お待ちください。</p>
 </main>
 
 <footer>
-  <p>Nuko Apps — 個人開発</p>
-  <p><a href="mailto:nu0417ko@gmail.com">お問い合わせ</a></p>
+  <p data-ja="Nuko Apps — 個人開発" data-en="Nuko Apps — built by an independent developer">Nuko Apps — 個人開発</p>
+  <p><a href="mailto:nu0417ko@gmail.com" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></p>
 </footer>
 
 </body>

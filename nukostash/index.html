@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Stash — 写真・動画を、簡単に貯められる。</title>
-<meta name="description" content="Stashは、X(Twitter)のタイムラインから写真・動画だけを効率よく閲覧・保存できるビューワーアプリです。">
+<title data-ja="Stash — 写真・動画を、簡単に貯められる。" data-en="Stash — Save photos and videos, effortlessly.">Stash — 写真・動画を、簡単に貯められる。</title>
+<meta name="description" data-ja="Stashは、X(Twitter)のタイムラインから写真・動画だけを効率よく閲覧・保存できるビューワーアプリです。" data-en="Stash is a timeline viewer that makes it easy to browse and save photos and videos from your X (Twitter) timeline." content="Stashは、X(Twitter)のタイムラインから写真・動画だけを効率よく閲覧・保存できるビューワーアプリです。">
 <link rel="icon" href="assets/icon.svg">
+<script src="../assets/i18n.js" defer></script>
 <style>
   :root {
     --violet-deep: #493B70;
@@ -36,8 +37,21 @@
   }
   header .brand { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 20px; }
   header .brand img { width: 32px; height: 32px; border-radius: 8px; }
+  header nav { display: flex; align-items: center; gap: 18px; }
   header nav a { color: var(--cream); text-decoration: none; font-size: 14px; opacity: 0.85; }
   header nav a:hover { opacity: 1; text-decoration: underline; }
+
+  .lang-toggle { display: flex; gap: 6px; }
+  .lang-toggle button {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: var(--cream);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .lang-toggle button.active { background: var(--cream); color: var(--violet-deep); font-weight: bold; border-color: var(--cream); }
 
   .hero {
     background: linear-gradient(135deg, var(--violet-deep) 0%, var(--violet-deep) 60%, var(--amber-deep) 130%);
@@ -154,6 +168,10 @@
   </div>
   <nav>
     <a href="../">Nuko Apps</a>
+    <div class="lang-toggle">
+      <button type="button" data-lang-btn="ja">日本語</button>
+      <button type="button" data-lang-btn="en">EN</button>
+    </div>
   </nav>
 </header>
 
@@ -161,17 +179,17 @@
   <div class="hero-inner">
     <div>
       <h1>Stash</h1>
-      <p class="tagline">写真・動画を、簡単に貯められる。</p>
-      <p class="desc">
+      <p class="tagline" data-ja="写真・動画を、簡単に貯められる。" data-en="Save photos and videos, effortlessly.">写真・動画を、簡単に貯められる。</p>
+      <p class="desc" data-ja="X(Twitter)のタイムラインから、写真・動画だけを効率よく閲覧・保存できるビューワーアプリ。おすすめ・フォロー中・リストを横断し、見たい投稿だけをすっきり並べます。" data-en="A timeline viewer that makes it easy to browse and save photos and videos from X (Twitter). Cross For You, Following, and Lists to see only the posts you care about.">
         X(Twitter)のタイムラインから、写真・動画だけを効率よく閲覧・保存できるビューワーアプリ。
         おすすめ・フォロー中・リストを横断し、見たい投稿だけをすっきり並べます。
       </p>
       <div class="badges">
-        <span class="badge">広告なし</span>
-        <span class="badge">個人開発</span>
-        <span class="badge">ログイン情報は端末内のみ</span>
+        <span class="badge" data-ja="広告なし" data-en="No ads">広告なし</span>
+        <span class="badge" data-ja="個人開発" data-en="Indie-developed">個人開発</span>
+        <span class="badge" data-ja="ログイン情報は端末内のみ" data-en="Login stays on your device">ログイン情報は端末内のみ</span>
       </div>
-      <div class="status-note">現在配布方法を準備中です。公開までしばらくお待ちください。</div>
+      <div class="status-note" data-ja="現在配布方法を準備中です。公開までしばらくお待ちください。" data-en="Distribution is being prepared. Please check back soon.">現在配布方法を準備中です。公開までしばらくお待ちください。</div>
     </div>
     <div class="hero-art">
       <img src="assets/screenshot-grid.png" alt="Stashのタイムライングリッド表示(イメージ)">
@@ -181,8 +199,8 @@
 
 <section>
   <div class="section-inner">
-    <h2>アプリの画面</h2>
-    <p class="section-sub">写真・動画をグリッドで一覧し、タップで詳細を確認できます。(画面はサンプルデータです)</p>
+    <h2 data-ja="アプリの画面" data-en="Screenshots">アプリの画面</h2>
+    <p class="section-sub" data-ja="写真・動画をグリッドで一覧し、タップで詳細を確認できます。(画面はサンプルデータです)" data-en="Browse photos and videos in a grid, and tap to see details. (Screens shown use sample data.)">写真・動画をグリッドで一覧し、タップで詳細を確認できます。(画面はサンプルデータです)</p>
     <div class="screens">
       <img src="assets/screenshot-grid.png" alt="Stashのタイムライングリッド表示(イメージ)">
       <img src="assets/screenshot-detail.png" alt="Stashの投稿詳細表示(イメージ)">
@@ -192,33 +210,33 @@
 
 <section style="background:white;">
   <div class="section-inner">
-    <h2>主な機能</h2>
-    <p class="section-sub">見たい投稿だけを、見やすく・探しやすく。</p>
+    <h2 data-ja="主な機能" data-en="Key features">主な機能</h2>
+    <p class="section-sub" data-ja="見たい投稿だけを、見やすく・探しやすく。" data-en="See only what you want, easy to browse and find.">見たい投稿だけを、見やすく・探しやすく。</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>おすすめ・フォロー中・リスト</h3>
-        <p>3つのタイムラインを切り替えて、写真・動画の投稿だけを横断してチェック。</p>
+        <h3 data-ja="おすすめ・フォロー中・リスト" data-en="For You, Following & Lists">おすすめ・フォロー中・リスト</h3>
+        <p data-ja="3つのタイムラインを切り替えて、写真・動画の投稿だけを横断してチェック。" data-en="Switch between three timelines to check only the photo and video posts that matter.">3つのタイムラインを切り替えて、写真・動画の投稿だけを横断してチェック。</p>
       </div>
       <div class="feature-card">
-        <h3>写真・動画で絞り込み</h3>
-        <p>「写真のみ」「動画・GIFのみ」で表示を切り替え。目的のメディアだけをすぐ探せます。</p>
+        <h3 data-ja="写真・動画で絞り込み" data-en="Filter by photos or videos">写真・動画で絞り込み</h3>
+        <p data-ja="「写真のみ」「動画・GIFのみ」で表示を切り替え。目的のメディアだけをすぐ探せます。" data-en="Switch between “Photos only” and “Videos & GIFs” to quickly find the media you're after.">「写真のみ」「動画・GIFのみ」で表示を切り替え。目的のメディアだけをすぐ探せます。</p>
       </div>
       <div class="feature-card">
-        <h3>リポスト表示・重複除去</h3>
-        <p>リポストを含めるかどうか、同じ投稿の重複を除くかどうかをワンタップで切り替え。</p>
+        <h3 data-ja="リポスト表示・重複除去" data-en="Repost toggle & de-duplication">リポスト表示・重複除去</h3>
+        <p data-ja="リポストを含めるかどうか、同じ投稿の重複を除くかどうかをワンタップで切り替え。" data-en="Toggle whether to include reposts, and whether to remove duplicate posts, with one tap.">リポストを含めるかどうか、同じ投稿の重複を除くかどうかをワンタップで切り替え。</p>
       </div>
       <div class="feature-card">
-        <h3>グリッド列数を自由に調整</h3>
-        <p>一覧の列数を増減して、一覧性と見やすさの好みに合わせられます。</p>
+        <h3 data-ja="グリッド列数を自由に調整" data-en="Adjustable grid columns">グリッド列数を自由に調整</h3>
+        <p data-ja="一覧の列数を増減して、一覧性と見やすさの好みに合わせられます。" data-en="Increase or decrease the number of columns to match how you like to browse.">一覧の列数を増減して、一覧性と見やすさの好みに合わせられます。</p>
       </div>
       <div class="feature-card">
-        <h3>保存・共有がワンタップ</h3>
-        <p>気に入った写真・動画をその場で端末に保存、または他アプリへ共有。</p>
+        <h3 data-ja="保存・共有がワンタップ" data-en="Save & share in one tap">保存・共有がワンタップ</h3>
+        <p data-ja="気に入った写真・動画をその場で端末に保存、または他アプリへ共有。" data-en="Save a photo or video straight to your device, or share it to another app.">気に入った写真・動画をその場で端末に保存、または他アプリへ共有。</p>
       </div>
       <div class="feature-card">
-        <h3>複数枚投稿・スレッドも表示</h3>
-        <p>1投稿に複数枚の画像がある場合は枚数表示付きでまとめて確認できます。</p>
+        <h3 data-ja="複数枚投稿・スレッドも表示" data-en="Multi-photo posts & threads">複数枚投稿・スレッドも表示</h3>
+        <p data-ja="1投稿に複数枚の画像がある場合は枚数表示付きでまとめて確認できます。" data-en="Posts with multiple images show a count badge so you can see them all at a glance.">1投稿に複数枚の画像がある場合は枚数表示付きでまとめて確認できます。</p>
       </div>
     </div>
   </div>
@@ -226,9 +244,9 @@
 
 <section class="privacy-section">
   <div class="section-inner">
-    <h2>プライバシーについて</h2>
-    <p class="section-sub">ログイン情報は、あなたの端末の外に出ません。</p>
-    <div class="privacy-note">
+    <h2 data-ja="プライバシーについて" data-en="About privacy">プライバシーについて</h2>
+    <p class="section-sub" data-ja="ログイン情報は、あなたの端末の外に出ません。" data-en="Your login never leaves your device.">ログイン情報は、あなたの端末の外に出ません。</p>
+    <div class="privacy-note" data-ja="ログインセッションは、この端末内にのみ保存されます。X(Twitter)以外のサーバーに送信されることは一切ありません。広告や解析用のトラッキングも組み込んでいません。" data-en="Your login session is stored only on this device. It is never sent anywhere other than X (Twitter). No ads or analytics tracking are built in.">
       ログインセッションは、この端末内にのみ保存されます。X(Twitter)以外のサーバーに送信されることは一切ありません。
       広告や解析用のトラッキングも組み込んでいません。
     </div>
@@ -236,8 +254,8 @@
 </section>
 
 <footer>
-  <p>Stash — 個人開発アプリ(非公式のXクライアントです)</p>
-  <p><a href="mailto:nu0417ko@gmail.com">お問い合わせ</a> · <a href="../">Nuko Apps</a></p>
+  <p data-ja="Stash — 個人開発アプリ(非公式のXクライアントです)" data-en="Stash — an indie-developed app (an unofficial X client)">Stash — 個人開発アプリ(非公式のXクライアントです)</p>
+  <p><a href="mailto:nu0417ko@gmail.com" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a> · <a href="../">Nuko Apps</a></p>
 </footer>
 
 </body>

@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NukoClip — 描くを、もっとシンプルに。</title>
-<meta name="description" content="NukoClipは、レイヤー機能や豊富な描画ツールを備えた、Android向けの基本無料お絵描きアプリです。広告なし・通信不要・個人情報の収集なし。">
+<title data-ja="NukoClip — 描くを、もっとシンプルに。" data-en="NukoClip — Drawing made simple.">NukoClip — 描くを、もっとシンプルに。</title>
+<meta name="description" data-ja="NukoClipは、レイヤー機能や豊富な描画ツールを備えた、Android向けの基本無料お絵描きアプリです。広告なし・通信不要・個人情報の収集なし。" data-en="Simple drawing app with rich layers, pressure brushes & left-hand controller." content="NukoClipは、レイヤー機能や豊富な描画ツールを備えた、Android向けの基本無料お絵描きアプリです。広告なし・通信不要・個人情報の収集なし。">
 <link rel="icon" href="assets/icon.png">
+<script src="../assets/i18n.js" defer></script>
 <style>
   :root {
     --violet-deep: #3B2F54;
@@ -35,8 +36,21 @@
   }
   header .brand { display: flex; align-items: center; gap: 10px; font-weight: bold; font-size: 20px; }
   header .brand img { width: 32px; height: 32px; border-radius: 8px; }
+  header nav { display: flex; align-items: center; gap: 18px; }
   header nav a { color: var(--cream); text-decoration: none; font-size: 14px; opacity: 0.85; }
   header nav a:hover { opacity: 1; text-decoration: underline; }
+
+  .lang-toggle { display: flex; gap: 6px; }
+  .lang-toggle button {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: var(--cream);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .lang-toggle button.active { background: var(--cream); color: var(--violet-deep); font-weight: bold; border-color: var(--cream); }
 
   .hero {
     background: linear-gradient(135deg, var(--violet-deep) 0%, var(--violet-deep) 60%, var(--coral) 130%);
@@ -160,7 +174,11 @@
     NukoClip
   </div>
   <nav>
-    <a href="nukoclip-privacy.html">Privacy Policy</a>
+    <a href="nukoclip-privacy.html" data-ja="プライバシーポリシー" data-en="Privacy Policy">プライバシーポリシー</a>
+    <div class="lang-toggle">
+      <button type="button" data-lang-btn="ja">日本語</button>
+      <button type="button" data-lang-btn="en">EN</button>
+    </div>
   </nav>
 </header>
 
@@ -168,19 +186,19 @@
   <div class="hero-inner">
     <div>
       <h1>NukoClip</h1>
-      <p class="tagline">描くを、もっとシンプルに。</p>
-      <p class="desc">
+      <p class="tagline" data-ja="描くを、もっとシンプルに。" data-en="Drawing made simple.">描くを、もっとシンプルに。</p>
+      <p class="desc" data-ja="レイヤー機能充実のシンプルなお絵描きアプリ。筆圧対応ブラシ・左手デバイス風コントローラー・9言語対応。スマホ・タブレットで本格的なイラスト制作ができます。" data-en="A simple drawing app packed with layers: pressure-sensitive brushes, a left-hand device controller, and support for 9 languages. Serious illustration work, right on your phone or tablet.">
         レイヤー機能充実のシンプルなお絵描きアプリ。筆圧対応ブラシ・左手デバイス風コントローラー・
         9言語対応。スマホ・タブレットで本格的なイラスト制作ができます。
       </p>
       <div class="badges">
-        <span class="badge">広告なし</span>
-        <span class="badge">通信不要</span>
-        <span class="badge">個人情報の収集なし</span>
-        <span class="badge">基本無料</span>
+        <span class="badge" data-ja="広告なし" data-en="No ads">広告なし</span>
+        <span class="badge" data-ja="通信不要" data-en="No internet required">通信不要</span>
+        <span class="badge" data-ja="個人情報の収集なし" data-en="No data collected">個人情報の収集なし</span>
+        <span class="badge" data-ja="基本無料" data-en="Free to use">基本無料</span>
       </div>
       <!-- Google Play の公開後、実際のストアURLに差し替え -->
-      <a class="cta" href="#" aria-disabled="true">Google Play で手に入れよう(近日公開)</a>
+      <a class="cta" href="#" aria-disabled="true" data-ja="Google Play で手に入れよう(近日公開)" data-en="Get it on Google Play (coming soon)">Google Play で手に入れよう(近日公開)</a>
     </div>
     <div class="hero-art">
       <!-- 実際に NukoClip で描かれたイラスト -->
@@ -191,8 +209,8 @@
 
 <section>
   <div class="section-inner">
-    <h2>アプリの画面</h2>
-    <p class="section-sub">実際にNukoClip上で制作した作品と、その編集画面です。</p>
+    <h2 data-ja="アプリの画面" data-en="Screenshots">アプリの画面</h2>
+    <p class="section-sub" data-ja="実際にNukoClip上で制作した作品と、その編集画面です。" data-en="Artwork made in NukoClip, along with its editing screens.">実際にNukoClip上で制作した作品と、その編集画面です。</p>
     <div class="screens">
       <img src="assets/screenshot-2.jpg" alt="NukoClipの編集画面(ナビゲーターパネル表示)">
       <img src="assets/screenshot-3.jpg" alt="NukoClipの編集画面(レイヤーマスク編集中、線画のみ表示)">
@@ -202,33 +220,33 @@
 
 <section style="background:white;">
   <div class="section-inner">
-    <h2>主な機能</h2>
-    <p class="section-sub">本格的なレイヤー編集から、左手デバイス風の操作パネルまで。</p>
+    <h2 data-ja="主な機能" data-en="Key features">主な機能</h2>
+    <p class="section-sub" data-ja="本格的なレイヤー編集から、左手デバイス風の操作パネルまで。" data-en="From serious layer editing to a left-hand controller panel.">本格的なレイヤー編集から、左手デバイス風の操作パネルまで。</p>
 
     <div class="feature-grid">
       <div class="feature-card">
-        <h3>筆圧対応ブラシ</h3>
-        <p>ペン・ブラシ・エアブラシ・消しゴム・ぼかし・指先(スマッジ)の6種類。手ブレ補正にも対応。</p>
+        <h3 data-ja="筆圧対応ブラシ" data-en="Pressure-sensitive brushes">筆圧対応ブラシ</h3>
+        <p data-ja="ペン・ブラシ・エアブラシ・消しゴム・ぼかし・指先(スマッジ)の6種類。手ブレ補正にも対応。" data-en="Pen, Brush, Airbrush, Eraser, Blur, and Smudge — six tools with stroke stabilization.">ペン・ブラシ・エアブラシ・消しゴム・ぼかし・指先(スマッジ)の6種類。手ブレ補正にも対応。</p>
       </div>
       <div class="feature-card">
-        <h3>レイヤー機能が充実</h3>
-        <p>合成モード18種類、レイヤーマスク、アルファロック、クリッピング、フォルダ管理、複数選択操作。</p>
+        <h3 data-ja="レイヤー機能が充実" data-en="Rich layer tools">レイヤー機能が充実</h3>
+        <p data-ja="合成モード18種類、レイヤーマスク、アルファロック、クリッピング、フォルダ管理、複数選択操作。" data-en="18 blend modes, layer masks, alpha lock, clip-to-layer-below, folders, and multi-select operations.">合成モード18種類、レイヤーマスク、アルファロック、クリッピング、フォルダ管理、複数選択操作。</p>
       </div>
       <div class="feature-card">
-        <h3>選択と変形を自由に</h3>
-        <p>矩形・楕円・投げ縄・自動選択と、自由変形・ゆがみ変形で思い通りに編集。</p>
+        <h3 data-ja="選択と変形を自由に" data-en="Selection & transform">選択と変形を自由に</h3>
+        <p data-ja="矩形・楕円・投げ縄・自動選択と、自由変形・ゆがみ変形で思い通りに編集。" data-en="Rectangle, ellipse, lasso, and magic wand selection, plus free transform and distort.">矩形・楕円・投げ縄・自動選択と、自由変形・ゆがみ変形で思い通りに編集。</p>
       </div>
       <div class="feature-card">
-        <h3>色調補正・フィルター</h3>
-        <p>明るさ・コントラスト、色相・彩度・明度、レベル補正、ぼかし、シャープ。</p>
+        <h3 data-ja="色調補正・フィルター" data-en="Color adjustment & filters">色調補正・フィルター</h3>
+        <p data-ja="明るさ・コントラスト、色相・彩度・明度、レベル補正、ぼかし、シャープ。" data-en="Brightness/contrast, hue/saturation/lightness, levels, blur, and sharpen.">明るさ・コントラスト、色相・彩度・明度、レベル補正、ぼかし、シャープ。</p>
       </div>
       <div class="feature-card">
-        <h3>左手デバイス風コントローラー</h3>
-        <p>十字キー+ABXYボタンをカスタマイズ可能。物理キーボードのショートカットも使用可能。</p>
+        <h3 data-ja="左手デバイス風コントローラー" data-en="Left-hand device controller">左手デバイス風コントローラー</h3>
+        <p data-ja="十字キー+ABXYボタンをカスタマイズ可能。物理キーボードのショートカットも使用可能。" data-en="An on-screen D-pad and face buttons with customizable assignments. Physical keyboard shortcuts work too.">十字キー+ABXYボタンをカスタマイズ可能。物理キーボードのショートカットも使用可能。</p>
       </div>
       <div class="feature-card">
-        <h3>保存・書き出し&多言語対応</h3>
-        <p>.nkclで保存、PNG/JPGで書き出し。9言語に対応し、端末の言語設定に自動で追従。</p>
+        <h3 data-ja="保存・書き出し&多言語対応" data-en="Save, export & multi-language">保存・書き出し&多言語対応</h3>
+        <p data-ja=".nkclで保存、PNG/JPGで書き出し。9言語に対応し、端末の言語設定に自動で追従。" data-en="Save as .nkcl, or export as PNG/JPG. Supports 9 languages, following your device setting automatically.">.nkclで保存、PNG/JPGで書き出し。9言語に対応し、端末の言語設定に自動で追従。</p>
       </div>
     </div>
 
@@ -244,18 +262,22 @@
 
 <section class="cta-section">
   <div class="section-inner">
-    <h2>広告なし、通信不要、完全オフライン</h2>
-    <p class="section-sub">
+    <h2 data-ja="広告なし、通信不要、完全オフライン" data-en="No ads. No internet required. Fully offline.">広告なし、通信不要、完全オフライン</h2>
+    <p class="section-sub" data-ja="個人情報の収集も一切行いません。いつでもどこでも、安心してお絵描きが楽しめます。" data-en="No personal data is collected, ever. Draw with peace of mind, anytime, anywhere.">
       個人情報の収集も一切行いません。いつでもどこでも、安心してお絵描きが楽しめます。
     </p>
     <!-- Google Play の公開後、実際のストアURLに差し替え -->
-    <a class="cta" href="#" aria-disabled="true">Google Play で手に入れよう(近日公開)</a>
+    <a class="cta" href="#" aria-disabled="true" data-ja="Google Play で手に入れよう(近日公開)" data-en="Get it on Google Play (coming soon)">Google Play で手に入れよう(近日公開)</a>
   </div>
 </section>
 
 <footer>
-  <p>NukoClip — 個人開発アプリ</p>
-  <p><a href="nukoclip-privacy.html">Privacy Policy</a> · <a href="mailto:nu0417ko@gmail.com">お問い合わせ</a> · <a href="https://wildheit.github.io/">Nuko Apps</a></p>
+  <p data-ja="NukoClip — 個人開発アプリ" data-en="NukoClip — an indie-developed app">NukoClip — 個人開発アプリ</p>
+  <p>
+    <a href="nukoclip-privacy.html" data-ja="プライバシーポリシー" data-en="Privacy Policy">プライバシーポリシー</a> ·
+    <a href="mailto:nu0417ko@gmail.com" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a> ·
+    <a href="https://wildheit.github.io/">Nuko Apps</a>
+  </p>
 </footer>
 
 </body>
