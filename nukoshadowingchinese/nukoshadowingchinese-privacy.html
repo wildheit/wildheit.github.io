@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-ja="NukoChineseShadowing プライバシーポリシー" data-en="NukoChineseShadowing Privacy Policy">NukoChineseShadowing Privacy Policy</title>
+<script src="../assets/i18n.js" defer></script>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    line-height: 1.6;
+    color: #222;
+  }
+  .lang-toggle { display: flex; gap: 6px; justify-content: flex-end; margin-bottom: 16px; }
+  .lang-toggle button {
+    background: white;
+    border: 1px solid #ccc;
+    color: #444;
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .lang-toggle button.active { background: #E11D48; color: white; border-color: #E11D48; font-weight: bold; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  .updated { color: #666; font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 20px; margin-top: 36px; }
+  p, li { font-size: 16px; }
+  ul { padding-left: 22px; }
+  code {
+    background: #f2f2f2;
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  a { color: #E11D48; }
+</style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <button type="button" data-lang-btn="ja">日本語</button>
+  <button type="button" data-lang-btn="en">EN</button>
+</div>
+
+<h1 data-ja="NukoChineseShadowing プライバシーポリシー" data-en="Privacy Policy for NukoChineseShadowing">Privacy Policy for NukoChineseShadowing</h1>
+<p class="updated" data-ja="最終更新日: 2026年9月10日" data-en="Last updated: 10 Sep 2026">Last updated: 10 Sep 2026</p>
+
+<p data-ja="NukoChineseShadowing(以下「本アプリ」)は、Nuko(以下「当方」)が開発する、台湾華語(繁体字中国語)のシャドウイング練習向けAndroidアプリです。このページでは、本アプリがどのようなデータを扱うかについて説明します。" data-en="NukoChineseShadowing (&quot;the app&quot;) is an Android app for Taiwanese Mandarin shadowing practice, developed by Nuko (&quot;we&quot;, &quot;our&quot;). This page explains what data the app does — and does not — handle.">
+  NukoChineseShadowing ("the app") is an Android app for Taiwanese Mandarin shadowing
+  practice, developed by Nuko ("we", "our"). This page explains what data the app does —
+  and does not — handle.
+</p>
+
+<h2 data-ja="概要" data-en="Short version">Short version</h2>
+<p data-ja="本アプリの中心機能(テキストへの注音符號・拼音の自動付与、音声読み上げ、自分の発音の録音・聞き比べ、テキスト一覧の管理)はすべて端末内で完結し、外部にデータを送信しません。データが端末外に送信されるのは、あなたが明示的に有効にした場合に限られる、次の2つのオプション機能のみです:" data-en="The app's core features — automatic Zhuyin/Pinyin annotation, text-to-speech playback, recording and comparing your own pronunciation, and managing your text list — all run entirely on your device and send nothing anywhere. Data only ever leaves your device through two optional features, and only if you explicitly turn them on:">
+  The app's core features — automatic Zhuyin/Pinyin annotation, text-to-speech playback,
+  recording and comparing your own pronunciation, and managing your text list — all run
+  entirely on your device and send nothing anywhere. Data only ever leaves your device
+  through two optional features, and only if you explicitly turn them on:
+</p>
+<ul>
+  <li data-ja="AI発音採点: ご自身のGemini APIキーを設定画面に入力すると、録音した音声がお手本のテキストとともにGoogleのGemini APIへ直接送信され、発音・声調の判定結果が返されます。当方が運営するサーバーは存在せず、この音声やテキストを当方が受け取ったり保存したりすることは一切ありません。" data-en="AI pronunciation scoring: if you enter your own Gemini API key in Settings, your recorded audio (together with the target sentence text) is sent directly from your device to Google's Gemini API, using your own key, and a pronunciation/tone assessment is sent back. We do not operate any server, and we never receive or store this audio or text ourselves.">AI pronunciation scoring: if you enter your own Gemini API key in Settings, your recorded audio (together with the target sentence text) is sent directly from your device to Google's Gemini API, using your own key, and a pronunciation/tone assessment is sent back. We do not operate any server, and we never receive or store this audio or text ourselves.</li>
+  <li data-ja="カメラでの文字読み取り(試験的機能): 撮影した写真から中国語テキストを認識するためにGoogleのML Kit(オンデバイス文字認識)を使用します。これは端末内だけで処理が完結し、画像が外部に送信されることはありません。" data-en="Camera text scanning (experimental): recognizing Chinese text from a photo uses Google's ML Kit on-device text recognition. This runs entirely on your device, and the image is never uploaded anywhere.">Camera text scanning (experimental): recognizing Chinese text from a photo uses Google's ML Kit on-device text recognition. This runs entirely on your device, and the image is never uploaded anywhere.</li>
+</ul>
+
+<h2 data-ja="端末に保存されるデータについて" data-en="What's stored on your device">What's stored on your device</h2>
+<p data-ja="登録したテキスト、ブックマーク、録音した音声、設定(入力したGemini APIキーを含む)は、すべて本アプリのローカルストレージ(Androidの端末内アプリデータ)にのみ保存されます。あなたが明示的に「一括保存」機能を使ってバックアップファイルを書き出さない限り、これらのデータが端末の外に出ることはありません。書き出したバックアップファイルは、Android標準のファイル選択画面(Storage Access Framework)を通じて、あなたが選んだ場所にのみ保存されます。" data-en="Your registered texts, bookmarks, recorded audio, and settings (including any Gemini API key you enter) are stored only in the app's local storage on your device. None of this leaves your device unless you explicitly use the &quot;back up&quot; feature to export a backup file, which is written only to a location you choose, through Android's standard file picker (the Storage Access Framework).">
+  Your registered texts, bookmarks, recorded audio, and settings (including any Gemini API
+  key you enter) are stored only in the app's local storage on your device. None of this
+  leaves your device unless you explicitly use the "back up" feature to export a backup
+  file, which is written only to a location you choose, through Android's standard file
+  picker (the Storage Access Framework).
+</p>
+
+<h2 data-ja="権限について" data-en="Permissions">Permissions</h2>
+<ul>
+  <li data-ja="マイク(RECORD_AUDIO): シャドウイング練習であなたが録音ボタンを押したときにのみ使用します。録音はお手本音声との聞き比べに使われ、AI発音採点を有効にしている場合のみ上記の通りGemini APIに送信されます。" data-en="Microphone (RECORD_AUDIO): used only when you tap the record button during shadowing practice, so you can compare your recording with the model audio, and — only if AI scoring is enabled — send it to the Gemini API as described above.">Microphone (RECORD_AUDIO): used only when you tap the record button during shadowing practice, so you can compare your recording with the model audio, and — only if AI scoring is enabled — send it to the Gemini API as described above.</li>
+  <li data-ja="インターネット(INTERNET): 上記のAI発音採点機能でのみ使用します。それ以外の機能はすべてオフラインで動作します。" data-en="Internet (INTERNET): used only for the optional AI pronunciation scoring feature above. Every other feature works fully offline.">Internet (INTERNET): used only for the optional AI pronunciation scoring feature above. Every other feature works fully offline.</li>
+  <li data-ja="カメラ: 本アプリ自身はカメラ権限を要求しません。カメラでの文字読み取り機能は、端末標準のカメラアプリを呼び出して撮影を行い、撮影された画像だけを受け取る方式です。" data-en="Camera: the app itself does not request camera permission. The camera text-scanning feature launches your device's own camera app to take the photo, and only receives the resulting image back.">Camera: the app itself does not request camera permission. The camera text-scanning feature launches your device's own camera app to take the photo, and only receives the resulting image back.</li>
+</ul>
+
+<h2 data-ja="データ収集・アクセス解析について" data-en="Data collection and analytics">Data collection and analytics</h2>
+<p data-ja="当方が収集しないもの:" data-en="We do not collect:">We do not collect:</p>
+<ul>
+  <li data-ja="個人情報(氏名・メールアドレス・位置情報など)" data-en="Personal information (name, email, location, etc.)">Personal information (name, email, location, etc.)</li>
+  <li data-ja="サーバーに送信される利用状況の解析やクラッシュレポート" data-en="Usage analytics or crash reports sent to any server">Usage analytics or crash reports sent to any server</li>
+  <li data-ja="広告識別子(本アプリに広告は含まれません)" data-en="Advertising identifiers (the app contains no ads)">Advertising identifiers (the app contains no ads)</li>
+  <li data-ja="お子様を含め、いかなる方からのいかなるデータも(上記のGemini API・ML Kitとの通信を除く)" data-en="Any data at all, from anyone, including children (other than the Gemini API / ML Kit interactions described above)">Any data at all, from anyone, including children (other than the Gemini API / ML Kit interactions described above)</li>
+</ul>
+
+<h2 data-ja="第三者サービスについて" data-en="Third-party services">Third-party services</h2>
+<p data-ja="本アプリが連携する第三者サービスは次の2つのみです。いずれもGoogleが提供するサービスで、それぞれのプライバシーポリシーが適用されます。" data-en="The app integrates with exactly two third-party services, both provided by Google and each governed by its own privacy policy:">
+  The app integrates with exactly two third-party services, both provided by Google and
+  each governed by its own privacy policy:
+</p>
+<ul>
+  <li data-ja="Google Gemini API(AI発音採点を有効にした場合のみ、あなた自身のAPIキーで直接通信します)" data-en="Google Gemini API (only when AI scoring is enabled, using your own API key, communicating directly from your device)">Google Gemini API (only when AI scoring is enabled, using your own API key, communicating directly from your device)</li>
+  <li data-ja="Google ML Kit(文字認識、端末内処理のみでネットワーク通信を伴いません)" data-en="Google ML Kit (text recognition, fully on-device with no network transmission)">Google ML Kit (text recognition, fully on-device with no network transmission)</li>
+</ul>
+<p data-ja="上記以外の第三者SDK・アクセス解析基盤・広告ネットワークは一切組み込んでいません。" data-en="No other third-party SDK, analytics platform, or ad network is included.">
+  No other third-party SDK, analytics platform, or ad network is included.
+</p>
+
+<h2 data-ja="お子様のプライバシーについて" data-en="Children's privacy">Children's privacy</h2>
+<p data-ja="本アプリは、AI発音採点機能を自らのAPIキーで有効にした場合を除き、誰からもデータを収集しません。そのため、13歳未満のお子様(またはお住まいの国で定められた年齢未満の方)から意図的に情報を収集することもありません。" data-en="Other than through the AI pronunciation scoring feature when you've enabled it with your own API key, the app collects no data from anyone. It therefore does not knowingly collect any information from children under 13 (or the relevant age in your country).">
+  Other than through the AI pronunciation scoring feature when you've enabled it with your
+  own API key, the app collects no data from anyone. It therefore does not knowingly
+  collect any information from children under 13 (or the relevant age in your country).
+</p>
+
+<h2 data-ja="本ポリシーの変更について" data-en="Changes to this policy">Changes to this policy</h2>
+<p data-ja="本ポリシーの内容に変更があった場合、このページを更新し、上記の「最終更新日」も合わせて更新します。そのような変更は、リリース前にアプリ内の説明にも反映されます。" data-en="If this policy ever changes, this page will be updated and the &quot;Last updated&quot; date above will change accordingly. Any such change would also be reflected in the app's in-app description before release.">
+  If this policy ever changes, this page will be updated and the "Last updated" date above
+  will change accordingly. Any such change would also be reflected in the app's in-app
+  description before release.
+</p>
+
+<h2 data-ja="お問い合わせ" data-en="Contact">Contact</h2>
+<p data-ja="本ポリシーやアプリに関するご質問は、以下までお送りください:" data-en="Questions about this policy or the app can be sent to:">
+  Questions about this policy or the app can be sent to: <a href="mailto:nu0417ko@gmail.com">nu0417ko@gmail.com</a>
+</p>
+
+</body>
+</html>
