@@ -77,24 +77,9 @@
   NukoCompress requests the following permissions, for the purposes below:
 </p>
 <ul>
-  <li data-ja="<code>POST_NOTIFICATIONS</code>: 圧縮処理中の進捗(何枚完了したかなど)を通知でお知らせするためだけに使用します。通知はすべて端末内で生成され、どこにも送信されません。" data-en="<code>POST_NOTIFICATIONS</code>: used only to show the compression progress (e.g. how many images are done) as a notification. Notifications are generated entirely on-device and never sent anywhere.">
-    <code>POST_NOTIFICATIONS</code>: used only to show compression progress (e.g.
-    how many images are done) as a notification. Notifications are generated
-    entirely on-device and never sent anywhere.
-  </li>
-  <li data-ja="<code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_MEDIA_PROCESSING</code>: アプリをバックグラウンドに回しても圧縮処理を止めずに続けるために使用します。この権限もファイルの外部送信とは無関係です。" data-en="<code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_MEDIA_PROCESSING</code>: used so compression can keep running when you switch away from the app. This permission is unrelated to sending any file anywhere.">
-    <code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_MEDIA_PROCESSING</code>:
-    used so compression can keep running when you switch away from the app. This
-    permission is unrelated to sending any file anywhere.
-  </li>
-  <li data-ja="<code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code> / <code>com.android.vending.BILLING</code>: 本アプリはGoogle Playの課金ライブラリ(Play Billing Library)を組み込んでおり、これらの権限はそのライブラリが将来のアプリ内課金(Pro機能のアップグレード)のためにGoogle Playと通信する際にのみ使用されます。画像やファイルの送信には一切使用しません。なお、購入手続き自体はGoogle Playが処理し、支払い情報は当方には渡りません。" data-en="<code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code> / <code>com.android.vending.BILLING</code>: the app includes Google's Play Billing Library, and these permissions are used only by that library to communicate with Google Play for an optional future in-app purchase (a Pro upgrade). They are never used to send your images or files anywhere. The purchase flow itself is handled entirely by Google Play, and payment details never reach us.">
-    <code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code> /
-    <code>com.android.vending.BILLING</code>: the app includes Google's Play Billing
-    Library, and these permissions are used only by that library to communicate with
-    Google Play for an optional in-app purchase (a Pro upgrade). They are never used
-    to send your images or files anywhere. The purchase flow itself is handled
-    entirely by Google Play, and payment details never reach us.
-  </li>
+  <li data-ja-html="<code>POST_NOTIFICATIONS</code>: 圧縮処理中の進捗(何枚完了したかなど)を通知でお知らせするためだけに使用します。通知はすべて端末内で生成され、どこにも送信されません。" data-en-html="<code>POST_NOTIFICATIONS</code>: used only to show compression progress (e.g. how many images are done) as a notification. Notifications are generated entirely on-device and never sent anywhere."><code>POST_NOTIFICATIONS</code>: used only to show compression progress (e.g. how many images are done) as a notification. Notifications are generated entirely on-device and never sent anywhere.</li>
+  <li data-ja-html="<code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_MEDIA_PROCESSING</code>: アプリをバックグラウンドに回しても圧縮処理を止めずに続けるために使用します。この権限もファイルの外部送信とは無関係です。" data-en-html="<code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_MEDIA_PROCESSING</code>: used so compression can keep running when you switch away from the app. This permission is unrelated to sending any file anywhere."><code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_MEDIA_PROCESSING</code>: used so compression can keep running when you switch away from the app. This permission is unrelated to sending any file anywhere.</li>
+  <li data-ja-html="<code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code> / <code>com.android.vending.BILLING</code>: 本アプリはGoogle Playの課金ライブラリ(Play Billing Library)を組み込んでおり、これらの権限はそのライブラリが将来のアプリ内課金(Pro機能のアップグレード)のためにGoogle Playと通信する際にのみ使用されます。画像やファイルの送信には一切使用しません。なお、購入手続き自体はGoogle Playが処理し、支払い情報は当方には渡りません。" data-en-html="<code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code> / <code>com.android.vending.BILLING</code>: the app includes Google's Play Billing Library, and these permissions are used only by that library to communicate with Google Play for an optional future in-app purchase (a Pro upgrade). They are never used to send your images or files anywhere. The purchase flow itself is handled entirely by Google Play, and payment details never reach us."><code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code> / <code>com.android.vending.BILLING</code>: the app includes Google's Play Billing Library, and these permissions are used only by that library to communicate with Google Play for an optional future in-app purchase (a Pro upgrade). They are never used to send your images or files anywhere. The purchase flow itself is handled entirely by Google Play, and payment details never reach us.</li>
 </ul>
 
 <h2 data-ja="データ収集・アクセス解析について" data-en="Data collection and analytics">Data collection and analytics</h2>
@@ -113,12 +98,7 @@
 </p>
 
 <h2 data-ja="第三者サービスについて" data-en="Third-party services">Third-party services</h2>
-<p data-ja="NukoCompressが組み込む第三者サービスは、アプリ内課金のためのGoogle Play Billing Libraryのみです。解析プラットフォーム・広告ネットワーク・クラウドストレージなどは一切組み込んでいません。購入時にGoogle Playが処理する情報については、<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Googleのプライバシーポリシー</a>をご確認ください。" data-en="The only third-party service NukoCompress integrates is Google's Play Billing Library, used for in-app purchases. It does not include any analytics platform, ad network, or cloud storage service. For how Google Play handles information during a purchase, see <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google's Privacy Policy</a>.">
-  The only third-party service NukoCompress integrates is Google's Play Billing
-  Library, used for in-app purchases. It does not include any analytics platform, ad
-  network, or cloud storage service. For how Google Play handles information during a
-  purchase, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
-</p>
+<p data-ja-html="NukoCompressが組み込む第三者サービスは、アプリ内課金のためのGoogle Play Billing Libraryのみです。解析プラットフォーム・広告ネットワーク・クラウドストレージなどは一切組み込んでいません。購入時にGoogle Playが処理する情報については、<a href='https://policies.google.com/privacy' target='_blank' rel='noopener'>Googleのプライバシーポリシー</a>をご確認ください。" data-en-html="The only third-party service NukoCompress integrates is Google's Play Billing Library, used for in-app purchases. It does not include any analytics platform, ad network, or cloud storage service. For how Google Play handles information during a purchase, see <a href='https://policies.google.com/privacy' target='_blank' rel='noopener'>Google's Privacy Policy</a>.">The only third-party service NukoCompress integrates is Google's Play Billing Library, used for in-app purchases. It does not include any analytics platform, ad network, or cloud storage service. For how Google Play handles information during a purchase, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
 
 <h2 data-ja="お子様のプライバシーについて" data-en="Children's privacy">Children's privacy</h2>
 <p data-ja="本アプリは誰からもデータを収集しないため、13歳未満のお子様(またはお住まいの国で定められた年齢未満の方)から意図的に情報を収集することもありません。" data-en="Because the app collects no data from anyone, it does not knowingly collect any information from children under 13 (or the relevant age in your country).">
@@ -133,9 +113,8 @@
 </p>
 
 <h2 data-ja="お問い合わせ" data-en="Contact">Contact</h2>
-<p data-ja="本ポリシーやアプリに関するご質問は、以下までお送りください:" data-en="Questions about this policy or the app can be sent to:">
-  Questions about this policy or the app can be sent to: <a href="mailto:contact@nukoapps.fyi">contact@nukoapps.fyi</a>
-</p>
+<p data-ja="本ポリシーやアプリに関するご質問は、以下までお送りください:" data-en="Questions about this policy or the app can be sent to:">Questions about this policy or the app can be sent to:</p>
+<p><a href="mailto:contact@nukoapps.fyi">contact@nukoapps.fyi</a></p>
 
 </body>
 </html>
