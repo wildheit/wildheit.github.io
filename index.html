@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-ja="Nuko Apps" data-en="Nuko Apps">Nuko Apps</title>
+<title data-ja="NukoApps" data-en="NukoApps">NukoApps</title>
 <meta name="description" data-ja="個人開発者が作る、広告なしのシンプルなAndroidアプリ一覧。" data-en="A list of simple, ad-free Android apps by an independent developer." content="個人開発者が作る、広告なしのシンプルなAndroidアプリ一覧。">
 <link rel="icon" href="nukoclip/assets/icon.png">
 <script src="assets/i18n.js" defer></script>
@@ -94,6 +94,20 @@
     margin-top: 36px;
   }
 
+  .biz-links { margin-top: 56px; text-align: center; }
+  .biz-links h2 { font-size: 15px; color: var(--violet-deep); margin: 0 0 14px; }
+  .biz-links ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .biz-links a {
+    display: inline-block;
+    padding: 8px 16px;
+    background: white;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .biz-links a:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
+
   footer {
     background: var(--violet-deep);
     color: rgba(248,233,212,0.7);
@@ -112,7 +126,7 @@
     <button type="button" data-lang-btn="ja">日本語</button>
     <button type="button" data-lang-btn="en">EN</button>
   </div>
-  <h1>Nuko Apps</h1>
+  <h1>NukoApps</h1>
   <p data-ja="個人開発者として、「あったら便利」と思えるシンプルなアプリを一つひとつ丁寧に作っています。広告なしのアプリを中心に展開中です。" data-en="As an independent developer, I carefully build simple apps that are genuinely useful, one at a time. Most of them are ad-free.">個人開発者として、「あったら便利」と思えるシンプルなアプリを一つひとつ丁寧に作っています。広告なしのアプリを中心に展開中です。</p>
 </div>
 
@@ -135,11 +149,24 @@
   </div>
 
   <p class="more-note" data-ja="他にもいくつかアプリを開発中です。公開まで少々お待ちください。" data-en="A few more apps are in the works. Stay tuned.">他にもいくつかアプリを開発中です。公開まで少々お待ちください。</p>
+
+  <nav class="biz-links" aria-label="事業者情報">
+    <h2 data-ja="事業者情報" data-en="About the business">事業者情報</h2>
+    <ul>
+      <li><a href="about/#overview" data-ja="事業概要" data-en="Business overview">事業概要</a></li>
+      <li><a href="about/#products" data-ja="サービス・プロダクト紹介" data-en="Services &amp; products">サービス・プロダクト紹介</a></li>
+      <li><a href="about/#contact" data-ja="お問い合わせ先" data-en="Contact">お問い合わせ先</a></li>
+      <li><a href="tokushoho/" data-ja="特定商取引法に基づく表記" data-en="Legal notice (Specified Commercial Transactions Act)">特定商取引法に基づく表記</a></li>
+    </ul>
+  </nav>
 </main>
 
 <footer>
-  <p data-ja="Nuko Apps — 個人開発" data-en="Nuko Apps — built by an independent developer">Nuko Apps — 個人開発</p>
-  <p><a href="mailto:nu0417ko@gmail.com" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a></p>
+  <p data-ja="NukoApps — 個人開発" data-en="NukoApps — built by an independent developer">NukoApps — 個人開発</p>
+  <p>
+    <a href="tokushoho/" data-ja="特定商取引法に基づく表記" data-en="Legal notice">特定商取引法に基づく表記</a> ·
+    <a href="mailto:contact@nukoapps.fyi" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a>
+  </p>
 </footer>
 
 </body>

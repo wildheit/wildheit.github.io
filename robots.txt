@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wildheit.github.io/sitemap.xml
+Sitemap: https://nukoapps.fyi/sitemap.xml

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-ja="事業者情報 — NukoApps" data-en="About — NukoApps">事業者情報 — NukoApps</title>
+<meta name="description" data-ja="NukoApps(ヌコアップス)の事業概要、サービス・プロダクト紹介、お問い合わせ先。" data-en="Business overview, products, and contact information for NukoApps." content="NukoApps(ヌコアップス)の事業概要、サービス・プロダクト紹介、お問い合わせ先。">
+<link rel="icon" href="../nukoclip/assets/icon.png">
+<script src="../assets/i18n.js" defer></script>
+<style>
+  :root {
+    --violet-deep: #3B2F54;
+    --violet-soft: #4B3B6B;
+    --coral: #FF705F;
+    --cream: #F8E9D4;
+    --ink: #222222;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  a { color: var(--violet-soft); }
+  img { max-width: 100%; display: block; }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 24px;
+    background: var(--violet-deep);
+    color: var(--cream);
+  }
+  header .brand { color: var(--cream); text-decoration: none; font-weight: bold; font-size: 20px; }
+  header nav { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; }
+  header nav a { color: var(--cream); text-decoration: none; font-size: 14px; opacity: 0.85; }
+  header nav a:hover { opacity: 1; text-decoration: underline; }
+
+  .lang-toggle { display: flex; gap: 6px; }
+  .lang-toggle button {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: var(--cream);
+    border-radius: 999px;
+    padding: 4px 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .lang-toggle button.active { background: var(--cream); color: var(--violet-deep); font-weight: bold; border-color: var(--cream); }
+
+  .hero {
+    background: linear-gradient(135deg, var(--violet-deep) 0%, var(--violet-deep) 60%, var(--coral) 130%);
+    color: var(--cream);
+    padding: 48px 24px 44px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 34px; margin: 0 0 8px; }
+  .hero p { font-size: 15px; opacity: 0.9; max-width: 52ch; margin: 0 auto; }
+
+  main { max-width: 800px; margin: 0 auto; padding: 24px 24px 24px; }
+  section { padding: 40px 0 8px; }
+  h2 { font-size: 26px; margin: 0 0 12px; color: var(--violet-deep); }
+  h3 { font-size: 17px; margin: 28px 0 10px; color: var(--violet-deep); }
+  p.lead { margin: 0 0 20px; color: #444; }
+
+  dl.info { background: white; border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); margin: 0; overflow: hidden; }
+  .info-row { display: grid; grid-template-columns: 180px 1fr; gap: 16px; padding: 16px 22px; border-top: 1px solid #eee; }
+  .info-row:first-child { border-top: none; }
+  .info-row dt { font-weight: bold; font-size: 14px; color: var(--violet-deep); }
+  .info-row dd { margin: 0; font-size: 14px; color: #333; }
+
+  ul.genres { margin: 0; padding-left: 22px; }
+  ul.genres li { margin-bottom: 6px; font-size: 15px; }
+
+  .app-list { display: flex; flex-direction: column; gap: 16px; }
+  .app-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: white;
+    border-radius: 14px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: var(--ink);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+  .app-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+  .app-card img { width: 56px; height: 56px; border-radius: 12px; flex-shrink: 0; }
+  .app-card .app-name { font-size: 18px; font-weight: bold; color: var(--violet-deep); margin: 0 0 4px; }
+  .app-card .app-desc { font-size: 14px; color: #555; margin: 0; }
+
+  .note { font-size: 13px; color: #666; margin: 16px 0 0; }
+
+  footer {
+    background: var(--violet-deep);
+    color: rgba(248,233,212,0.7);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 48px;
+  }
+  footer a { color: var(--cream); }
+
+  @media (max-width: 720px) {
+    .info-row { grid-template-columns: 1fr; gap: 4px; }
+    .hero h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="../">NukoApps</a>
+  <nav>
+    <a href="../" data-ja="トップ" data-en="Home">トップ</a>
+    <a href="../tokushoho/" data-ja="特定商取引法に基づく表記" data-en="Legal notice">特定商取引法に基づく表記</a>
+    <div class="lang-toggle">
+      <button type="button" data-lang-btn="ja">日本語</button>
+      <button type="button" data-lang-btn="en">EN</button>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1 data-ja="事業者情報" data-en="About">事業者情報</h1>
+  <p data-ja="NukoApps(ヌコアップス)の事業概要、サービス・プロダクト紹介、お問い合わせ先です。" data-en="Business overview, products, and contact information for NukoApps.">NukoApps(ヌコアップス)の事業概要、サービス・プロダクト紹介、お問い合わせ先です。</p>
+</div>
+
+<main>
+
+  <section id="overview">
+    <h2 data-ja="事業概要" data-en="Business overview">事業概要</h2>
+    <p class="lead" data-ja="NukoAppsは、スマートフォン向けアプリケーションを企画・開発・配信する個人事業です。「あったら便利」と思えるシンプルなツールを、一つひとつ丁寧に作っています。" data-en="NukoApps is a sole proprietorship that plans, develops, and distributes smartphone applications. We carefully build simple, genuinely useful tools, one at a time.">NukoAppsは、スマートフォン向けアプリケーションを企画・開発・配信する個人事業です。「あったら便利」と思えるシンプルなツールを、一つひとつ丁寧に作っています。</p>
+    <dl class="info">
+      <div class="info-row">
+        <dt data-ja="屋号" data-en="Business name">屋号</dt>
+        <dd data-ja="NukoApps(ヌコアップス)" data-en="NukoApps">NukoApps(ヌコアップス)</dd>
+      </div>
+      <div class="info-row">
+        <dt data-ja="事業形態" data-en="Business type">事業形態</dt>
+        <dd data-ja="個人事業" data-en="Sole proprietorship">個人事業</dd>
+      </div>
+      <div class="info-row">
+        <dt data-ja="事業内容" data-en="Business activities">事業内容</dt>
+        <dd data-ja="スマートフォン向けアプリケーションの企画・開発・配信" data-en="Planning, development, and distribution of smartphone applications">スマートフォン向けアプリケーションの企画・開発・配信</dd>
+      </div>
+      <div class="info-row">
+        <dt data-ja="所在地" data-en="Address">所在地</dt>
+        <dd data-ja="〒170-0013 東京都豊島区東池袋2丁目50番13号 ひすい研究会東池袋ビル6階" data-en="6F, Hisui Kenkyukai Higashi-Ikebukuro Building, 2-50-13 Higashi-Ikebukuro, Toshima-ku, Tokyo 170-0013, Japan">〒170-0013 東京都豊島区東池袋2丁目50番13号 ひすい研究会東池袋ビル6階</dd>
+      </div>
+      <div class="info-row">
+        <dt data-ja="Webサイト" data-en="Website">Webサイト</dt>
+        <dd><a href="https://nukoapps.fyi/">https://nukoapps.fyi/</a></dd>
+      </div>
+    </dl>
+  </section>
+
+  <section id="products">
+    <h2 data-ja="サービス・プロダクト紹介" data-en="Services &amp; products">サービス・プロダクト紹介</h2>
+    <p class="lead" data-ja="個人で企画・開発・配信している、スマートフォン向けのアプリケーションです。" data-en="Smartphone applications that we plan, develop, and distribute as an independent developer.">個人で企画・開発・配信している、スマートフォン向けのアプリケーションです。</p>
+
+    <h3 data-ja="開発ジャンル" data-en="Categories">開発ジャンル</h3>
+    <ul class="genres">
+      <li data-ja="画像編集・加工系アプリ(お絵描き・イラスト制作、画像圧縮、写真のEXIF情報削除など)" data-en="Image editing &amp; processing apps (drawing and illustration, image compression, photo EXIF removal, etc.)">画像編集・加工系アプリ(お絵描き・イラスト制作、画像圧縮、写真のEXIF情報削除など)</li>
+      <li data-ja="語学学習支援系アプリ(外国語の発音練習、カメラを使った文字学習支援など)" data-en="Language-learning support apps (foreign-language pronunciation practice, camera-based reading aids, etc.)">語学学習支援系アプリ(外国語の発音練習、カメラを使った文字学習支援など)</li>
+      <li data-ja="ファイル管理ユーティリティ系アプリ(ファイル一括リネームなど)" data-en="File-management utility apps (batch file renaming, etc.)">ファイル管理ユーティリティ系アプリ(ファイル一括リネームなど)</li>
+    </ul>
+
+    <h3 data-ja="プロダクト" data-en="Products">プロダクト</h3>
+    <div class="app-list">
+      <a class="app-card" href="../nukoclip/">
+        <img src="../nukoclip/assets/icon.png" alt="NukoClip icon">
+        <div>
+          <p class="app-name">NukoClip</p>
+          <p class="app-desc" data-ja="描くを、もっとシンプルに。レイヤー機能充実のお絵描きアプリ。" data-en="Drawing made simple. A layer-rich illustration app.">描くを、もっとシンプルに。レイヤー機能充実のお絵描きアプリ。</p>
+        </div>
+      </a>
+    </div>
+
+    <p class="note" data-ja="アプリは無料でご利用いただけるものを中心に提供します。一部の機能は、アプリ内課金や広告表示によって提供する場合があります。有償の機能・サービスに関する事項は「特定商取引法に基づく表記」をご確認ください。" data-en="Most apps are free to use. Some features may be offered through in-app purchases or ad-supported models. For details on paid features and services, please see the Legal notice (Act on Specified Commercial Transactions).">アプリは無料でご利用いただけるものを中心に提供します。一部の機能は、アプリ内課金や広告表示によって提供する場合があります。有償の機能・サービスに関する事項は「特定商取引法に基づく表記」をご確認ください。</p>
+  </section>
+
+  <section id="contact">
+    <h2 data-ja="お問い合わせ先" data-en="Contact">お問い合わせ先</h2>
+    <p class="lead" data-ja="お問い合わせはメールにて承ります。内容を確認のうえ、順次ご返信いたします。" data-en="Please contact us by email. We will reply in order after reviewing your message.">お問い合わせはメールにて承ります。内容を確認のうえ、順次ご返信いたします。</p>
+    <dl class="info">
+      <div class="info-row">
+        <dt data-ja="メールアドレス" data-en="Email">メールアドレス</dt>
+        <dd><a href="mailto:contact@nukoapps.fyi">contact@nukoapps.fyi</a></dd>
+      </div>
+      <div class="info-row">
+        <dt data-ja="所在地" data-en="Address">所在地</dt>
+        <dd data-ja="〒170-0013 東京都豊島区東池袋2丁目50番13号 ひすい研究会東池袋ビル6階" data-en="6F, Hisui Kenkyukai Higashi-Ikebukuro Building, 2-50-13 Higashi-Ikebukuro, Toshima-ku, Tokyo 170-0013, Japan">〒170-0013 東京都豊島区東池袋2丁目50番13号 ひすい研究会東池袋ビル6階</dd>
+      </div>
+    </dl>
+  </section>
+
+</main>
+
+<footer>
+  <p data-ja="NukoApps — 個人開発" data-en="NukoApps — built by an independent developer">NukoApps — 個人開発</p>
+  <p>
+    <a href="../tokushoho/" data-ja="特定商取引法に基づく表記" data-en="Legal notice">特定商取引法に基づく表記</a> ·
+    <a href="mailto:contact@nukoapps.fyi" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a> ·
+    <a href="../">NukoApps</a>
+  </p>
+</footer>
+
+</body>
+</html>
